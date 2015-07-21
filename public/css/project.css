@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,greek");
 html,
 body,
 div,
@@ -148,13 +149,36 @@ select {
   vertical-align: middle;
 }
 body {
-  background: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #17b9f0;
 }
 .project {
-  width: 800px;
+  width: 960px;
   margin: 0 auto;
   padding: 30px;
   min-height: 500px;
   background: #fff;
+}
+.block {
+  margin-bottom: 60px;
+}
+.btn {
+  cursor: pointer;
+  background: #17b9f0;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+  border: none;
+  color: #fff;
+  outline: none;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=project.css.map */

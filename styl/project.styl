@@ -1,14 +1,68 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,greek')
 @import 'jeet'
 @import 'nib'
 @import 'lib/reset'
 @import 'lib/rupture'
 
+$color-gray = #D6E1E5
+$color-gray-lt = #DEE7EA
+$color-gray-dk = #93A4AA
+
+$color-blue = #17B9F0
+$color-blue-lt = #3BC7F3
+$color-blue-dk = #119CCB
+
+$color-red = #F74A4C
+$color-red-lt = #F86D6E
+$color-red-dk = #CB1216
+
+$color-yellow = #FAD46B
+$color-yellow-lt = #FBDD8E
+$color-yellow-dk = #F2BD6B
+
+$color-green = #42B4AB
+$color-green-lt = #7BC6C0
+$color-green-dk = #28948C
+
+$color-purple = #A88CD3
+$color-purple-dk = #9175BB
+
+$color-orange = #F28529
+$color-orange-dk = #E8661F
+
+$color-dark = #364347
+$font-size = 14px
+$font-family = 'Roboto', sans-serif
+
 body
-    background #eee
+    font-family $font-family
+
+a
+    text-decoration none
+    color $color-blue
 
 .project
-    width 800px
+    width 960px
     margin 0 auto
     padding 30px
     min-height 500px
     background white
+
+.block
+    margin-bottom 60px
+
+.btn
+    cursor pointer
+    background $color-blue
+    display inline-block
+    vertical-align middle
+    padding 0 20px
+    border none
+    color #fff
+    outline none
+    line-height 40px
+    height 40px
+    text-align center
+    font-size $font-size
+    font-family $font-family
+    border-radius 5px
