@@ -51,18 +51,70 @@ a
 .block
     margin-bottom 60px
 
+.section
+    margin-bottom 20px
+
 .btn
     cursor pointer
-    background $color-blue
+    background-color $color-gray
     display inline-block
     vertical-align middle
-    padding 0 20px
+    padding 0 30px
     border none
     color #fff
     outline none
-    line-height 40px
-    height 40px
+    line-height 45px
+    height 45px
     text-align center
     font-size $font-size
     font-family $font-family
     border-radius 5px
+    position relative
+    white-shace nowrap
+    overflow hidden
+    box-shadow inset 0 -2px 0 rgba(0, 0, 0, .075)
+    transition .2s
+
+    &.green
+        background-color $color-green-lt
+
+    &.blue
+        background-color $color-blue-lt
+
+    &.red
+        background-color $color-red-lt
+
+    &.yellow
+        background-color $color-yellow-lt
+
+    &.purple
+        background-color $color-purple
+
+    &.orange
+        background-color $color-orange
+
+    &.flat
+        box-shadow none
+
+    &:before
+        content ''
+        position absolute
+        top 50%
+        left 50%
+        margin-top -25px
+        margin-left -25px
+        width 50px
+        background #fff
+        transition .2s
+        opacity 0
+        height 50px
+        border-radius 125px
+        transform scale(0)
+
+    &:hover
+        &:before
+            transform scale(4)
+            opacity .35
+
+    &:active
+        transform translateY(1px)
