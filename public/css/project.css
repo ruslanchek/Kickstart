@@ -147,4 +147,14 @@ input,
 select {
   vertical-align: middle;
 }
+body {
+  background: #eee;
+}
+.project {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 500px;
+  background: #fff;
+}
 /*# sourceMappingURL=project.css.map */
