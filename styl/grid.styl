@@ -1,0 +1,12 @@
+.grid
+	cf()
+
+	for $column in 1..$grid-columns
+		.col-{$column}
+			margin-bottom $grid-margin-bottom
+			col($column/$grid-columns, gutter: $grid-gutter)
+
+	&:last-child
+		[class^="col-"],
+		[class*=" col-"]
+			margin-bottom 0

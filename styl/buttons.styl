@@ -1,59 +1,3 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,greek')
-@import 'jeet'
-@import 'nib'
-@import 'lib/reset'
-@import 'lib/rupture'
-
-$color-gray = #D6E1E5
-$color-gray-lt = #DEE7EA
-$color-gray-dk = #93A4AA
-
-$color-blue = #17B9F0
-$color-blue-lt = #3BC7F3
-$color-blue-dk = #119CCB
-
-$color-red = #F74A4C
-$color-red-lt = #F86D6E
-$color-red-dk = #CB1216
-
-$color-yellow = #FAD46B
-$color-yellow-lt = #FBDD8E
-$color-yellow-dk = #F2BD6B
-
-$color-green = #42B4AB
-$color-green-lt = #7BC6C0
-$color-green-dk = #28948C
-
-$color-purple = #A88CD3
-$color-purple-dk = #9175BB
-
-$color-orange = #F28529
-$color-orange-dk = #E8661F
-
-$color-dark = #364347
-$font-size = 14px
-$font-family = 'Roboto', sans-serif
-
-body
-    font-family $font-family
-
-a
-    text-decoration none
-    color $color-blue
-
-.project
-    width 960px
-    margin 0 auto
-    padding 30px
-    min-height 500px
-    background white
-
-.block
-    margin-bottom 60px
-
-.section
-    margin-bottom 20px
-
 .btn
     cursor pointer
     background-color $color-gray
@@ -72,7 +16,7 @@ a
     position relative
     white-shace nowrap
     overflow hidden
-    box-shadow inset 0 -2px 0 rgba(0, 0, 0, .075)
+    box-shadow inset 0 -3px 0 rgba(0, 0, 0, .1)
     transition .2s
     user-select none
 
@@ -105,10 +49,10 @@ a
         margin-top -25px
         margin-left -25px
         width 50px
+        height 50px
         background #fff
         transition .2s
         opacity 0
-        height 50px
         border-radius 125px
         transform scale(0)
         display block
@@ -145,9 +89,10 @@ a
         pointer-events none
 
         &:before
-            transform scale(0) translateX(-300%)
-            opacity .3
-            animation loading-button 1s infinite linear
+            border-radius 0
+            transform scale(1) translateX(-300%)
+            opacity .7
+            animation loading-button .75s infinite
 
     @keyframes active-button-reflow
         to
@@ -158,9 +103,13 @@ a
             transform scale(0)
             opacity 0
 
+        1%
+            transform scale(0)
+            opacity .5
+
         20%
             transform scale(4)
-            opacity .5
+            opacity .3
 
         100%
             transform scale(4)
@@ -168,13 +117,13 @@ a
 
     @keyframes loading-button
         0%
-            transform scale(0) translateX(-300%)
-            opacity .3
+            transform scale(1) translateX(-300%)
+            opacity 0
 
         99.99%
-            transform scale(4) translateX(300%)
+            transform scale(1) translateX(300%)
             opacity .8
 
         100%
-            transform scale(0) translateX(-250%)
-            opacity .3
+            transform scale(1) translateX(-300%)
+            opacity 0

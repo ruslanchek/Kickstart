@@ -7,10 +7,32 @@ html
 	body
 		.project
 			.block
-				div.section: a.btn(href="#") Compose e-mail
-				div.section: a.btn.green(href="#") Compose e-mail
-				div.section: a.btn.blue(href="#") Compose e-mail
-				div.section: a.btn.red.disabled(href="#") Compose e-mail
-				div.section: a.btn.yellow.loading(href="#") Compose e-mail
-				div.section: a.btn.purple(href="#") Compose e-mail
-				div.section: a.btn.orange(href="#") Compose e-mail
+				h1 Kickstart
+				p Hello world!
+			
+			.block
+				h2 Buttons
+				.grid
+					.col-6: a.btn(href="#") Compose e-mail
+					.col-6: a.btn.green(href="#") Compose e-mail
+					.col-6: a.btn.blue(href="#") Compose e-mail
+					.col-6: a.btn.red.disabled(href="#") Compose e-mail
+					
+				.grid
+					.col-6: a.btn.orange(href="#") Compose e-mail
+					.col-6: a.btn.yellow.loading(href="#") Compose e-mail
+					.col-6: a.btn.purple(href="#") Compose e-mail
+					.col-6: a.btn.purple(href="#") Compose e-mail
+
+			.block
+				h2 Forms
+				form.form
+					.row
+						label.title Name
+						.item
+							input(type="text", placeholder="Your name here", readonly, value="sad")
+						
+					.row
+						label.title E-mail
+						.item
+							input(type="text")
