@@ -22,6 +22,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/styl\/lib\/reset.styl": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -82,7 +91,7 @@
 		"uuidString": "30AF8816-A3E9-4E29-8959-A41D0F8662D3"
 		}
 	],
-"lastSavedByUser": "Ruslan Shashkov",
+"lastSavedByUser": "admin",
 "manualImportLinks": {
 	},
 "projectAttributes": {

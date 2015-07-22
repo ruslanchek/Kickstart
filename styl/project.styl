@@ -74,6 +74,7 @@ a
     overflow hidden
     box-shadow inset 0 -2px 0 rgba(0, 0, 0, .075)
     transition .2s
+    user-select none
 
     &.green
         background-color $color-green-lt
@@ -111,6 +112,7 @@ a
         border-radius 125px
         transform scale(0)
         display block
+        animation active-button 1.5s 1
 
     &:after
         content ''
@@ -129,11 +131,10 @@ a
             opacity .2
 
     &:active
-        transform translateY(1px) scale(.99)
+        transform translateY(1px) scale(.997)
 
         &:before
-            transform scale(4)
-            opacity .35
+            animation-name active-button-reflow
 
     &:disabled,
     &.disabled
@@ -141,5 +142,39 @@ a
         pointer-events none
 
     &.loading
+        pointer-events none
+
         &:before
-            opacity 1
+            transform scale(0) translateX(-300%)
+            opacity .3
+            animation loading-button 1s infinite linear
+
+    @keyframes active-button-reflow
+        to
+            width auto
+
+    @keyframes active-button
+        0%
+            transform scale(0)
+            opacity 0
+
+        20%
+            transform scale(4)
+            opacity .5
+
+        100%
+            transform scale(4)
+            opacity 0
+
+    @keyframes loading-button
+        0%
+            transform scale(0) translateX(-300%)
+            opacity .3
+
+        99.99%
+            transform scale(4) translateX(300%)
+            opacity .8
+
+        100%
+            transform scale(0) translateX(-250%)
+            opacity .3
