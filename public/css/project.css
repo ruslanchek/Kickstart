@@ -156,7 +156,12 @@ body {
 }
 a {
   text-decoration: none;
-  color: #17b9f0;
+  color: #3bc7f3;
+  -webkit-transition: color 0.075s;
+  transition: color 0.075s;
+}
+a:hover {
+  color: #119ccb;
 }
 .project {
   width: 800px;
@@ -169,19 +174,19 @@ a {
   margin-bottom: 60px;
 }
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 h1 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 h3 {
@@ -273,6 +278,9 @@ h3 {
   filter: alpha(opacity=0);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+.btn:hover {
+  color: #fff;
 }
 .btn:hover:after {
   opacity: 0.2;
@@ -1076,7 +1084,7 @@ h3 {
 .form input[type="email"]:focus,
 .form input[type="password"]:focus,
 .form textarea:focus {
-  border-color: #b3bec2;
+  border-color: #3bc7f3;
   color: #364347;
 }
 .form .row {
@@ -1131,5 +1139,8 @@ h3 {
 }
 .form .row .item:last-child {
   margin-right: 0%;
+}
+.form textarea {
+  height: auto;
 }
 /*# sourceMappingURL=project.css.map */

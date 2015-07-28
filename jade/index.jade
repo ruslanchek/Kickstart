@@ -8,10 +8,11 @@ html
 		.project
 			.block
 				h1 Kickstart
-				p Hello world!
+				p Hello world! Here is a <a href="#">link</a>.
 			
 			.block
 				h2 Buttons
+				
 				.grid
 					.col-6: a.btn(href="#") Compose e-mail
 					.col-6: a.btn.green(href="#") Compose e-mail
@@ -30,9 +31,19 @@ html
 					.row
 						label.title Name
 						.item
-							input(type="text", placeholder="Your name here", readonly, value="sad")
+							input(type="text", placeholder="Your name here")
 						
 					.row
 						label.title E-mail
 						.item
-							input(type="text")
+							input(type="text", disabled, value="Disabled field")
+							
+					.row
+						label.title Phone
+						.item
+							input(type="text", readonly, value="Readonly field")
+							
+					.row
+						label.title Messgae
+						.item
+							textarea(rows="3")
