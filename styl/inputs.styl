@@ -1,0 +1,41 @@
+input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea
+        height 45px
+        box-sizing border-box
+        line-height 45px
+        padding 0 15px
+        border-radius 5px
+        border 1px solid $color-gray - 20
+        font-size $font-size
+        font-family $font-family
+        outline none
+        transition .2s
+        width 100%
+        color $color-gray-dk - 20
+
+        +placeholder()
+            color $color-gray - 20
+            transition color .2s
+
+        &:disabled
+            opacity .75
+            background-color $color-gray-lt
+            border-color $color-gray-lt !important
+
+            +placeholder()
+                color #fff !important
+
+        &:hover
+            border-color $color-gray - 15
+
+            +placeholder()
+                color $color-gray - 20
+
+        &:focus
+            border-color $color-blue-lt
+            color $color-dark
+            
+    textarea
+        height auto

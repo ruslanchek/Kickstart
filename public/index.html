@@ -2,33 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Limestone</title>
     <link rel="stylesheet" href="/css/project.css">
   </head>
   <body>
-    <div class="project">
+    <div class="header">
+      <div class="limiter">
+        <div class="block">
+          <h1>Limestone</h1>
+        </div>
+      </div>
+    </div>
+    <div class="limiter">
       <div class="block">
-        <h1>Kickstart</h1>
-        <p>Hello world! Here is a <a href="#">link</a>.</p>
+        <h1>Typography</h1>
+        <p>The default font-size is 16px with line-height of 1.5. Additionally all paragraphs get have a bottom margin of 30px (the default spacing unit).</p>
       </div>
       <div class="block">
         <h2>Buttons</h2>
         <div class="grid">
-          <div class="col-6"><a href="#" class="btn">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn green">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn blue">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn red disabled">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide green">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide blue">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide red disabled">Compose e-mail</a></div>
         </div>
         <div class="grid">
-          <div class="col-6"><a href="#" class="btn orange">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn yellow loading">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn purple">Compose e-mail</a></div>
-          <div class="col-6"><a href="#" class="btn purple">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide orange">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide yellow loading">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide purple">Compose e-mail</a></div>
+          <div class="col-6"><a href="#" class="btn wide flat">Compose e-mail</a></div>
         </div>
       </div>
       <div class="block">
-        <h2>Forms</h2>
-        <form class="form">
+        <h2>Form</h2>
+        <form class="form linear">
           <div class="row">
             <label class="title">Name</label>
             <div class="item">
@@ -48,9 +55,15 @@
             </div>
           </div>
           <div class="row">
-            <label class="title">Messgae</label>
+            <label class="title">Message</label>
             <div class="item">
               <textarea rows="3"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <label class="title"> </label>
+            <div class="item">
+              <button type="submit" class="btn blue">Send it</button>
             </div>
           </div>
         </form>

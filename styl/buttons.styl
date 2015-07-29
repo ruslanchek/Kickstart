@@ -4,11 +4,12 @@
     display inline-block
     vertical-align middle
     padding 0 30px
+    box-sizing border-box
     border none
     color #fff
     outline none
-    line-height 45px
-    height 45px
+    line-height 48px
+    height 50px
     text-align center
     font-size $font-size
     font-family $font-family
@@ -19,6 +20,7 @@
     box-shadow inset 0 -3px 0 rgba(0, 0, 0, .1)
     transition .2s
     user-select none
+    min-width 150px
 
     &.green
         background-color $color-green-lt
@@ -40,6 +42,9 @@
 
     &.flat
         box-shadow none
+        
+    &.wide
+        width 100%
 
     &:before
         content ''

@@ -2,32 +2,37 @@ doctype html
 html
 	head
 		meta(charset="UTF-8")
-		title Document
+		title Limestone
 		link(rel="stylesheet", href="/css/project.css")
 	body
-		.project
+		.header
+			.limiter
+				.block
+					h1 Limestone
+
+		.limiter
 			.block
-				h1 Kickstart
-				p Hello world! Here is a <a href="#">link</a>.
+				h1 Typography
+				p The default font-size is 16px with line-height of 1.5. Additionally all paragraphs get have a bottom margin of 30px (the default spacing unit).
 			
 			.block
 				h2 Buttons
 				
 				.grid
-					.col-6: a.btn(href="#") Compose e-mail
-					.col-6: a.btn.green(href="#") Compose e-mail
-					.col-6: a.btn.blue(href="#") Compose e-mail
-					.col-6: a.btn.red.disabled(href="#") Compose e-mail
+					.col-6: a.btn.wide(href="#") Compose e-mail
+					.col-6: a.btn.wide.green(href="#") Compose e-mail
+					.col-6: a.btn.wide.blue(href="#") Compose e-mail
+					.col-6: a.btn.wide.red.disabled(href="#") Compose e-mail
 					
 				.grid
-					.col-6: a.btn.orange(href="#") Compose e-mail
-					.col-6: a.btn.yellow.loading(href="#") Compose e-mail
-					.col-6: a.btn.purple(href="#") Compose e-mail
-					.col-6: a.btn.purple(href="#") Compose e-mail
+					.col-6: a.btn.wide.orange(href="#") Compose e-mail
+					.col-6: a.btn.wide.yellow.loading(href="#") Compose e-mail
+					.col-6: a.btn.wide.purple(href="#") Compose e-mail
+					.col-6: a.btn.wide.flat(href="#") Compose e-mail
 
 			.block
-				h2 Forms
-				form.form
+				h2 Form
+				form.form.linear
 					.row
 						label.title Name
 						.item
@@ -44,6 +49,11 @@ html
 							input(type="text", readonly, value="Readonly field")
 							
 					.row
-						label.title Messgae
+						label.title Message
 						.item
 							textarea(rows="3")
+
+					.row
+						label.title 
+						.item
+							button.btn.blue(type="submit") Send it
