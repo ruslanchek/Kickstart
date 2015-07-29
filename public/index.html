@@ -34,38 +34,84 @@
         </div>
       </div>
       <div class="block">
-        <h2>Form</h2>
-        <form class="form linear">
-          <div class="row">
-            <label class="title">Name</label>
-            <div class="item">
-              <input type="text" placeholder="Your name here">
+        <h2>Forms</h2>
+        <form class="form columnar">
+          <fieldset>
+            <legend>Columnar form</legend>
+            <div class="row">
+              <label class="title">Name</label>
+              <div class="item">
+                <input type="text" placeholder="Your name here">
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label class="title">E-mail</label>
-            <div class="item">
-              <input type="text" disabled value="Disabled field">
+            <div class="row">
+              <label class="title">E-mail</label>
+              <div class="item">
+                <input type="text" disabled value="Disabled field">
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label class="title">Phone</label>
-            <div class="item">
-              <input type="text" readonly value="Readonly field">
+            <div class="row">
+              <label class="title">Phone</label>
+              <div class="item">
+                <input type="text" readonly value="Readonly field">
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label class="title">Message</label>
-            <div class="item">
-              <textarea rows="3"></textarea>
+            <div class="row">
+              <label class="title">Message</label>
+              <div class="item">
+                <textarea rows="3"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label class="title"> </label>
-            <div class="item">
-              <button type="submit" class="btn blue">Send it</button>
+            <div class="row">
+              <label class="title"> </label>
+              <div class="item">
+                <button type="submit" class="btn blue">Send it</button>
+              </div>
             </div>
-          </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="block">
+        <form class="form">
+          <fieldset>
+            <legend>Linear form</legend>
+            <div class="grid">
+              <div class="col-6"></div>
+              <div class="col-12">
+                <div class="row">
+                  <label class="title">Name</label>
+                  <div class="item">
+                    <input type="text" placeholder="Your name here">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="title">E-mail</label>
+                  <div class="item">
+                    <input type="text" disabled value="Disabled field">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="title">Phone</label>
+                  <div class="item">
+                    <input type="text" readonly value="Readonly field">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="title">Message</label>
+                  <div class="item">
+                    <textarea rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="title"> </label>
+                  <div class="item">
+                    <button type="submit" class="btn blue">Send it</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6"></div>
+            </div>
+          </fieldset>
         </form>
       </div>
     </div>

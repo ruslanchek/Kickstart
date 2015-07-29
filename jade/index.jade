@@ -31,29 +31,67 @@ html
 					.col-6: a.btn.wide.flat(href="#") Compose e-mail
 
 			.block
-				h2 Form
-				form.form.linear
-					.row
-						label.title Name
-						.item
-							input(type="text", placeholder="Your name here")
+				h2 Forms
+				
+				form.form.columnar
+					fieldset
+						legend Columnar form
 						
-					.row
-						label.title E-mail
-						.item
-							input(type="text", disabled, value="Disabled field")
+						.row
+							label.title Name
+							.item
+								input(type="text", placeholder="Your name here")
 							
-					.row
-						label.title Phone
-						.item
-							input(type="text", readonly, value="Readonly field")
-							
-					.row
-						label.title Message
-						.item
-							textarea(rows="3")
+						.row
+							label.title E-mail
+							.item
+								input(type="text", disabled, value="Disabled field")
+								
+						.row
+							label.title Phone
+							.item
+								input(type="text", readonly, value="Readonly field")
+								
+						.row
+							label.title Message
+							.item
+								textarea(rows="3")
 
-					.row
-						label.title 
-						.item
-							button.btn.blue(type="submit") Send it
+						.row
+							label.title 
+							.item
+								button.btn.blue(type="submit") Send it
+
+			.block
+				form.form
+					fieldset
+						legend Linear form
+						
+						.grid
+							.col-6
+							.col-12
+								.row
+									label.title Name
+									.item
+										input(type="text", placeholder="Your name here")
+									
+								.row
+									label.title E-mail
+									.item
+										input(type="text", disabled, value="Disabled field")
+										
+								.row
+									label.title Phone
+									.item
+										input(type="text", readonly, value="Readonly field")
+										
+								.row
+									label.title Message
+									.item
+										textarea(rows="3")
+
+								.row
+									label.title 
+									.item
+										button.btn.blue(type="submit") Send it
+							.col-6

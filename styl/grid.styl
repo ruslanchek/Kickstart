@@ -1,15 +1,19 @@
 .grid
 	cf()
-	
+
 	margin-bottom $default-spacing-unit
-	
+
 	+below($below-handheld)
+		margin-bottom 0
+
+	&:last-child
 		margin-bottom 0
 
 	for $column in 1..$grid-columns
 		.col-{$column}
+			min-height 1px
 			col($column/$grid-columns, gutter: $grid-gutter)
-			
+
 			+below($below-handheld)
 				col(1/1, gutter: 0)
 				margin-bottom $default-spacing-unit
