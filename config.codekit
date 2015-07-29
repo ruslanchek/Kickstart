@@ -22,6 +22,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public\/css\/keyframes.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/css\/keyframes.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/public\/css\/mixin.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -36,15 +45,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/css\/project.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/public\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -122,6 +122,22 @@
 		"importCSS": 0,
 		"inputAbbreviatedPath": "\/styl\/inputs.styl",
 		"outputAbbreviatedPath": "\/public\/css\/inputs.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"resolveRelativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0
+		},
+	"\/styl\/keyframes.styl": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"fileType": 8,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"importCSS": 0,
+		"inputAbbreviatedPath": "\/styl\/keyframes.styl",
+		"outputAbbreviatedPath": "\/public\/css\/keyframes.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -221,7 +237,7 @@
 		"uuidString": "30AF8816-A3E9-4E29-8959-A41D0F8662D3"
 		}
 	],
-"lastSavedByUser": "admin",
+"lastSavedByUser": "Ruslan Shashkov",
 "manualImportLinks": {
 	},
 "projectAttributes": {
