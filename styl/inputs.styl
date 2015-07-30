@@ -1,9 +1,10 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea
+textarea,
+.select
 	box-sizing border-box
-	padding 8px 15px 10px
+	padding 10px 15px
 	min-height 45px
 	border-radius $border-radius
 	border 1px solid $color-gray - 20
@@ -37,9 +38,51 @@ textarea
 		border-color $color-blue-lt
 		color $color-dark
 
+	&.error
+		border-color $color-red
+
 textarea
 	padding-top 10px
 
+
+.select
+	position relative
+	cursor pointer
+	padding 0
+
+	&:after
+		content ''
+		display block
+		position absolute
+		top 50%
+		right 15px
+		width 0
+		height 0
+		margin-top -3px
+		border-style solid
+		border-width 7px 6px 0 6px
+		transition .2s
+		border-color $color-gray - 20 transparent transparent transparent
+
+	&:hover
+		&:after
+			border-color $color-gray - 50 transparent transparent transparent
+
+	select
+		cursor pointer
+		position relative
+		top 0
+		left 0
+		width 100%
+		padding 12px 15px 10px
+		margin 0
+		background transparent
+		border none
+		outline none
+		-webkit-appearance none
+		color $color-gray-dk - 20
+		font-family $font-family
+		font-size $font-size
 
 input[type="checkbox"]
 	$size = 20px
@@ -75,7 +118,7 @@ input[type="checkbox"]
 			content ''
 			width $size - 10
 			height $size - 10
-			border-radius 3px
+			border-radius 1px
 			background-color $color-blue
 			opacity 0
 			transform scale(0)
@@ -147,7 +190,7 @@ input[type="radio"]
 			content ''
 			width $size - 10
 			height $size - 10
-			border-radius $size - 4
+			border-radius $size
 			background-color $color-blue
 			opacity 0
 			transform scale(0)

@@ -104,14 +104,26 @@ html
 							.col-6
 							.col-12
 								.row
-									label.title Name
+									label.title Error here
 									.item
-										input(type="text", placeholder="Tpye your nickname")
+										input.error(type="text", placeholder="Tpye your nickname")
 									
 								.row
 									label.title Message
 									.item
 										textarea(rows="3")
+										
+								.row
+									label.title Select realm
+									.item
+										.select
+											select
+												option North America
+												option South America
+												option Europe
+												option Asia
+												option Oceania
+												option South Africa
 										
 								.row
 									label.title
