@@ -82,9 +82,13 @@ html
 								input(type="text", readonly, value="Readonly field")
 								
 						.row
-							label.title Message
+							label.title Gender
 							.item
-								textarea(rows="3")
+								input#radio-1(type="radio", name="radio-1", value="1", checked)
+								label(for="radio-1") Male
+								
+								input#radio-2(type="radio", name="radio-1", value="2")
+								label(for="radio-2") Female
 
 						.row
 							label.title 
@@ -102,22 +106,18 @@ html
 								.row
 									label.title Name
 									.item
-										input(type="text", placeholder="Your name here")
+										input(type="text", placeholder="Tpye your nickname")
 									
-								.row
-									label.title E-mail
-									.item
-										input(type="text", disabled, value="Disabled field")
-										
-								.row
-									label.title Phone
-									.item
-										input(type="text", readonly, value="Readonly field")
-										
 								.row
 									label.title Message
 									.item
 										textarea(rows="3")
+										
+								.row
+									label.title
+									.item
+										input#checkbox-1(type="checkbox")
+										label(for="checkbox-1") Check me, baby
 
 								.row
 									label.title 
