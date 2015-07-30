@@ -1,41 +1,41 @@
 input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	textarea
-		height 45px
-		box-sizing border-box
-		line-height 45px
-		padding 0 15px
-		border-radius $border-radius
-		border 1px solid $color-gray - 20
-		font-size $font-size
-		font-family $font-family
-		outline none
-		transition border-color .2s, color .2s, background-color .2s, box-shadow .2s
-		width 100%
-		color $color-gray-dk - 20
+input[type="email"],
+input[type="password"],
+textarea
+	box-sizing border-box
+	padding 8px 15px 10px
+	min-height 45px
+	border-radius $border-radius
+	border 1px solid $color-gray - 20
+	font-size $font-size
+	font-family $font-family
+	outline none
+	transition border-color .2s, color .2s, background-color .2s, box-shadow .2s
+	width 100%
+	display block
+	color $color-gray-dk - 20
+
+	+placeholder()
+		color $color-gray - 20
+		transition color .2s
+
+	&:disabled
+		opacity .75
+		background-color $color-gray-lt
+		border-color $color-gray-lt !important
+
+		+placeholder()
+			color #fff !important
+
+	&:hover
+		border-color $color-gray - 15
 
 		+placeholder()
 			color $color-gray - 20
-			transition color .2s
 
-		&:disabled
-			opacity .75
-			background-color $color-gray-lt
-			border-color $color-gray-lt !important
+	&:focus
+		border-color $color-blue-lt
+		color $color-dark
 
-			+placeholder()
-				color #fff !important
-
-		&:hover
-			border-color $color-gray - 15
-
-			+placeholder()
-				color $color-gray - 20
-
-		&:focus
-			border-color $color-blue-lt
-			color $color-dark
-
-	textarea
-		height auto
+textarea
+	padding-top 10px
