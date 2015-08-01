@@ -67,6 +67,22 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/styl\/block.styl": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"fileType": 8,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"importCSS": 0,
+		"inputAbbreviatedPath": "\/styl\/block.styl",
+		"outputAbbreviatedPath": "\/public\/css\/block.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"resolveRelativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0
+		},
 	"\/styl\/buttons.styl": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -195,6 +211,22 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
+	"\/styl\/media-block.styl": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"fileType": 8,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"importCSS": 0,
+		"inputAbbreviatedPath": "\/styl\/media-block.styl",
+		"outputAbbreviatedPath": "\/public\/css\/media-block.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"resolveRelativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0
+		},
 	"\/styl\/mixin.styl": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -220,22 +252,6 @@
 		"importCSS": 0,
 		"inputAbbreviatedPath": "\/styl\/project.styl",
 		"outputAbbreviatedPath": "\/public\/css\/project.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"resolveRelativeURLS": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0
-		},
-	"\/styl\/sections.styl": {
-		"createSourceMap": 1,
-		"debugStyle": 0,
-		"fileType": 8,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"importCSS": 0,
-		"inputAbbreviatedPath": "\/styl\/sections.styl",
-		"outputAbbreviatedPath": "\/public\/css\/sections.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -287,7 +303,7 @@
 		"uuidString": "30AF8816-A3E9-4E29-8959-A41D0F8662D3"
 		}
 	],
-"lastSavedByUser": "admin",
+"lastSavedByUser": "Ruslan Shashkov",
 "manualImportLinks": {
 	},
 "projectAttributes": {

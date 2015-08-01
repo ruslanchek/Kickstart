@@ -59,9 +59,6 @@ hr
 .block
 	margin-bottom $default-spacing-unit * 2
 
-.section
-	margin-bottom $default-spacing-unit
-
 p
 	margin-bottom $default-spacing-unit
 
@@ -84,7 +81,8 @@ h3
 	color $color-gray-dk
 
 
-.color-block
+.color-block,
+.color-block-gray
 	$height = 120px
 
 	height $height
@@ -93,6 +91,10 @@ h3
 	text-align center
 	line-height ($height / 3) * 2
 	border-radius $border-radius
+
+	&.color-block-gray
+		height ($height / 3) * 2
+		line-height ($height / 3) * 2
 
 	.lt, .dk
 		width 50%
@@ -125,6 +127,21 @@ h3
 
 		.dk
 			background-color $color-gray-dk
+
+	&.gray-ltr
+		background-color $color-gray-ltr
+
+	&.gray-lt
+		background-color $color-gray-lt
+
+	&.gray
+		background-color $color-gray
+
+	&.gray-md
+		background-color $color-gray-md
+
+	&.gray-dk
+		background-color $color-gray-dk
 
 	&.red
 		background-color $color-red
@@ -170,6 +187,12 @@ h3
 
 		.dk
 			background-color $color-dark-dk
+
+	&.dark-lt
+		background-color $color-dark-lt
+
+	&.dark-dk
+		background-color $color-dark-dk
 
 	&.orange
 		background-color $color-orange

@@ -25,11 +25,11 @@
 
 		thead
 			th
-				border-bottom 1px solid $border-component-color
+				border-bottom 1px solid $color-gray
 
 		tfoot
 			td
-				border-top 1px solid $border-component-color
+				border-top 1px solid $color-gray
 
 		&.rounded
 			border-radius $border-radius
@@ -37,28 +37,28 @@
 		&.striped
 			tbody
 				tr:nth-child(even)
-					background-color $bg-table-stripe
+					background-color $color-gray-ltr
 
 		&.hovered
 			tbody
 				trhover
-					background-color $bg-table-hover
+					background-color $color-gray
 
 			&.striped
 				tr:nth-child(even)hover
-					background-color $bg-table-stripe - 5
+					background-color $color-gray-ltr - 5
 
 		&.bordered
-			border-color $border-component-color
+			border-color $color-gray
 
 			thead
 				tr
-					background-color $bg-table-head
+					background-color $color-gray-md
 
 			&.bordered-rows-v
 				td,
 				th
-					border-right-color $border-component-color
+					border-right-color $color-gray
 
 					&:last-of-type,
 					&:last-of-type
@@ -67,7 +67,7 @@
 		&.bordered-rows-h
 			tbody
 				td
-					border-bottom-color $border-component-color
+					border-bottom-color $color-gray
 
 				tr:last-of-type
 					td

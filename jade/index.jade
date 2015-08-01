@@ -52,6 +52,25 @@ html
 					.col-3: .color-block.green Green
 						.lt
 						.dk
+						
+				.grid
+					.col-3: .color-block-gray.gray-ltr Gray-LTR
+					
+					.col-3: .color-block-gray.gray-md Gray-MD
+					
+					.col-3: .color-block-gray.gray-lt Gray-LT
+					
+					.col-3: .color-block-gray.gray Gray
+					
+					.col-3: .color-block-gray.gray-dk Gray-DK
+						
+					.col-3: .color-block-gray.dark-lt Dark-LT
+			
+					.col-3: .color-block-gray.dark Dark
+			
+					.col-3: .color-block-gray.dark-dk Dark-DK
+						
+			hr
 			
 			.block
 				h2 Buttons
@@ -72,6 +91,7 @@ html
 			
 			.block
 				h2 Grid
+				
 				.grid-demo
 					.grid
 						.col-4 4
@@ -96,83 +116,83 @@ html
 			hr
 			
 			.block
-				h2 Forms
+				h2 Columnar form
 				
 				form.form.columnar
-					fieldset
-						legend Columnar form
+					.row
+						label.title Name
+						.item
+							input(type="text", placeholder="Your name here")
 						
-						.row
-							label.title Name
-							.item
-								input(type="text", placeholder="Your name here")
+					.row
+						label.title E-mail
+						.item
+							input(type="text", disabled, value="Disabled field")
 							
-						.row
-							label.title E-mail
-							.item
-								input(type="text", disabled, value="Disabled field")
-								
-						.row
-							label.title Phone
-							.item
-								input(type="text", readonly, value="Readonly field")
-								
-						.row
-							label.title Gender
-							.item
-								input#radio-1(type="radio", name="radio-1", value="1", checked)
-								label(for="radio-1") Male
-								
-								input#radio-2(type="radio", name="radio-1", value="2")
-								label(for="radio-2") Female
+					.row
+						label.title Phone
+						.item
+							input(type="text", readonly, value="Readonly field")
+							
+					.row
+						label.title Gender
+						.item
+							input#radio-1(type="radio", name="radio-1", value="1", checked)
+							label(for="radio-1") Male
+							
+							input#radio-2(type="radio", name="radio-1", value="2")
+							label(for="radio-2") Female
 
-						.row
-							label.title 
-							.item
-								button.btn.blue(type="submit") Send it
+					.row
+						label.title 
+						.item
+							button.btn.blue(type="submit") Send it
+
+			hr
 
 			.block
+				h2 Linear form
+				
 				form.form
-					fieldset
-						legend Linear form
-						
-						.grid
-							.col-6
-							.col-12
-								.row
-									label.title Error here
-									.item
-										input.error(type="text", placeholder="Type your nickname")
+					.grid
+						.col-6
+						.col-12
+							.row
+								label.title Error here
+								.item
+									input.error(type="text", placeholder="Type your nickname")
+								
+							.row
+								label.title Message
+								.item
+									textarea(rows="3")
 									
-								.row
-									label.title Message
-									.item
-										textarea(rows="3")
-										
-								.row
-									label.title Select realm
-									.item
-										.select
-											select
-												option North America
-												option South America
-												option Europe
-												option Asia
-												option Oceania
-												option South Africa
-										
-								.row
-									label.title
-									.item
-										input#checkbox-1(type="checkbox")
-										label(for="checkbox-1") Check me, baby
+							.row
+								label.title Select realm
+								.item
+									.select
+										select
+											option North America
+											option South America
+											option Europe
+											option Asia
+											option Oceania
+											option South Africa
+									
+							.row
+								label.title
+								.item
+									input#checkbox-1(type="checkbox")
+									label(for="checkbox-1") Check me, baby
 
-								.row
-									label.title 
-									.item
-										button.btn.blue(type="submit") Send it
-							.col-6
-							
+							.row
+								label.title 
+								.item
+									button.btn.blue(type="submit") Send it
+						.col-6
+						
+			hr
+						
 			.block
 				h2 Table
 				
@@ -220,51 +240,83 @@ html
 								td.text-right(colspan="5") Total
 								td $1 290 000
 								
+			hr
+								
 			.block
-				h2 Sections
-				
-				section.section
-					.section-thumb
-						a(href="#"): img(src="http://lorempixel.com/500/500/?_=1")
-					
-					.section-body
-						.date July 27, 1984
-
-						h3 Section with date
-
-						p
-							|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							|nisi ut aliquip.
+				.grid
+					.col-6
+						h2 Aside panel
+						
+						.aside-panel
+							.section
+								h3.title Aside title
+								
+								p Select you items and press Search
+								
+							form.form
+								.section
+									label.title Your realm
+									.select.small
+										select
+											option North America
+											option South America
+											option Europe
+											option Asia
+											option Oceania
+											option South Africa
+								
+								.section
+									label.title Search string
+									input.small(type="text", placeholder="E.g. BMW")
+											
+								.section
+									button.btn.blue.wide(type="submit") Search
+								
+					.col-18
+						h2 Sections
+						
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=1")
 							
-				section.section
-					.section-thumb
-						a(href="#"): img(src="http://lorempixel.com/500/500/?_=2")
-					
-					.section-body
-						.date July 27, 1984
+							.media-block-body
+								.date July 27, 1984
 
-						h3 Section with date
+								h3 Section with date
 
-						p
-							|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							|nisi ut aliquip.
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+									
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=2")
 							
-				section.section
-					.section-thumb
-						a(href="#"): img(src="http://lorempixel.com/500/500/?_=3")
-					
-					.section-body
-						.date July 27, 1984
+							.media-block-body
+								.date July 27, 1984
 
-						h3 Section with date
+								h3 Section with date
 
-						p
-							|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							|nisi ut aliquip.
-				
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+									
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=3")
+							
+							.media-block-body
+								.date July 27, 1984
+
+								h3 Section with date
+
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+						

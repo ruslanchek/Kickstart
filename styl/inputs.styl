@@ -4,7 +4,7 @@ input[type="password"],
 textarea,
 .select
 	box-sizing border-box
-	padding 9px 15px 11px
+	padding 10px 15px
 	min-height 45px
 	border-radius $border-radius
 	border 1px solid $color-gray - 20
@@ -15,6 +15,20 @@ textarea,
 	width 100%
 	display block
 	color $color-gray-dk - 20
+
+	&.small
+		min-height 36px
+		padding 7px 10px
+		font-size $font-size-small
+
+		&.select
+			padding 0
+
+			select
+				min-height 34px
+				padding 6px 10px
+				font-size $font-size-small
+
 
 	+placeholder()
 		color $color-gray - 20
@@ -49,6 +63,7 @@ textarea
 	position relative
 	cursor pointer
 	padding 0
+	background-color #fff
 
 	&:after
 		content ''
@@ -75,6 +90,8 @@ textarea
 		left 0
 		width 100%
 		padding 10px 15px
+		min-height 43px
+		box-sizing border-box
 		margin 0
 		background transparent
 		border none
