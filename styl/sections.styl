@@ -1,0 +1,25 @@
+.section
+	margin-bottom $default-spacing-unit
+
+	cf()
+
+	.section-thumb
+		@extend .grid .col-4
+		border-radius $border-radius
+		background-color $color-gray-lt
+		overflow hidden
+		height 133px
+		text-align center
+		line-height 1
+		vertical-align middle
+
+		img
+			width 100%
+			display inline-block
+			border-radius $border-radius
+
+	.section-body
+		@extend .grid .col-20
+
+		*:last-child
+			margin-bottom 0
