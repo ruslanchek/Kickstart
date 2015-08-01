@@ -102,7 +102,7 @@ textarea
 		font-size $font-size
 
 input[type="checkbox"]
-	$size = 20px
+	$size = 18px
 
 	visibility hidden
 	opacity 0
@@ -117,20 +117,21 @@ input[type="checkbox"]
 		&:before
 			box-sizing border-box
 			position absolute
-			top 1px
+			top 0px
 			left 0
 			content ''
 			width $size
 			height $size
 			display inline-block
 			border-radius 4px
-			border 2px solid $color-gray - 15
+			border 1px solid $color-gray - 20
 			transition .15s
+			background-color #fff
 
 		&:after
 			box-sizing border-box
 			position absolute
-			top 6px
+			top 5px
 			left 5px
 			content ''
 			width $size - 10
@@ -143,7 +144,7 @@ input[type="checkbox"]
 
 		&:hover
 			&:before
-				border-color $color-gray - 35
+				border-color $color-gray - 40
 
 	&.error
 		&+label
@@ -171,7 +172,7 @@ input[type="checkbox"]
 					background-color $color-blue - 15
 
 input[type="radio"]
-	$size = 20px
+	$size = 18px
 
 	visibility hidden
 	opacity 0
@@ -182,13 +183,13 @@ input[type="radio"]
 		position relative
 		padding-left $size * 1.5
 		margin-right $default-spacing-unit
-		margin-top 12px
 		display inline-block
 		z-index 1
 
 		&:before
 			box-sizing border-box
 			position absolute
+			background-color #fff
 			top 2px
 			left 0
 			content ''
@@ -196,7 +197,7 @@ input[type="radio"]
 			height $size
 			display inline-block
 			border-radius $size
-			border 2px solid $color-gray - 15
+			border 1px solid $color-gray - 20
 			transition .15s
 
 		&:after
@@ -215,14 +216,14 @@ input[type="radio"]
 
 		&:hover
 			&:before
-				border-color $color-gray - 35
+				border-color $color-gray - 40
 
 	&:checked
 		&+label
 			cursor default
 
 			&:before
-				border 2px solid $color-blue
+				border 1px solid $color-blue
 
 			&:after
 				opacity 1

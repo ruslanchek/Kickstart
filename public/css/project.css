@@ -2212,31 +2212,32 @@ input[type="checkbox"] {
 input[type="checkbox"]+label {
   cursor: pointer;
   position: relative;
-  padding-left: 30px;
+  padding-left: 27px;
   z-index: 1;
 }
 input[type="checkbox"]+label:before {
   box-sizing: border-box;
   position: absolute;
-  top: 1px;
+  top: 0px;
   left: 0;
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
   border-radius: 4px;
-  border: 2px solid #c7d2d6;
+  border: 1px solid #c2cdd1;
   -webkit-transition: 0.15s;
   transition: 0.15s;
+  background-color: #fff;
 }
 input[type="checkbox"]+label:after {
   box-sizing: border-box;
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 5px;
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 1px;
   background-color: #17b9f0;
   opacity: 0;
@@ -2249,7 +2250,7 @@ input[type="checkbox"]+label:after {
   transition: 0.15s;
 }
 input[type="checkbox"]+label:hover:before {
-  border-color: #b3bec2;
+  border-color: #aeb9bd;
 }
 input[type="checkbox"].error+label:before {
   border-color: #f74a4c;
@@ -2285,23 +2286,23 @@ input[type="radio"] {
 input[type="radio"]+label {
   cursor: pointer;
   position: relative;
-  padding-left: 30px;
+  padding-left: 27px;
   margin-right: 30px;
-  margin-top: 12px;
   display: inline-block;
   z-index: 1;
 }
 input[type="radio"]+label:before {
   box-sizing: border-box;
   position: absolute;
+  background-color: #fff;
   top: 2px;
   left: 0;
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
-  border-radius: 20px;
-  border: 2px solid #c7d2d6;
+  border-radius: 18px;
+  border: 1px solid #c2cdd1;
   -webkit-transition: 0.15s;
   transition: 0.15s;
 }
@@ -2311,9 +2312,9 @@ input[type="radio"]+label:after {
   top: 7px;
   left: 5px;
   content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 20px;
+  width: 8px;
+  height: 8px;
+  border-radius: 18px;
   background-color: #17b9f0;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -2325,13 +2326,13 @@ input[type="radio"]+label:after {
   transition: 0.15s;
 }
 input[type="radio"]+label:hover:before {
-  border-color: #b3bec2;
+  border-color: #aeb9bd;
 }
 input[type="radio"]:checked+label {
   cursor: default;
 }
 input[type="radio"]:checked+label:before {
-  border: 2px solid #17b9f0;
+  border: 1px solid #17b9f0;
 }
 input[type="radio"]:checked+label:after {
   opacity: 1;
@@ -2350,6 +2351,9 @@ input[type="radio"]:checked+label:after {
 }
 .form .row .title {
   line-height: 2;
+}
+.form .row input[type="radio"]+label {
+  margin-top: 12px;
 }
 @media only screen and (max-width: 500px) {
   .form .btn {
@@ -2480,7 +2484,7 @@ input[type="radio"]:checked+label:after {
 }
 .aside-panel .section {
   border-bottom: 1px solid #ccd7db;
-  padding: 20px;
+  padding: 22px 20px;
 }
 .aside-panel .section *:last-child {
   margin-bottom: 0;
