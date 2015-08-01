@@ -1912,7 +1912,7 @@ input[type="password"],
 textarea,
 .select {
   box-sizing: border-box;
-  padding: 10px 15px;
+  padding: 9px 15px 11px;
   min-height: 45px;
   border-radius: 4px;
   border: 1px solid #c2cdd1;
@@ -2082,7 +2082,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 12px 15px 10px;
+  padding: 10px 15px;
   margin: 0;
   background: transparent;
   border: none;
@@ -2108,7 +2108,7 @@ input[type="checkbox"]+label {
 input[type="checkbox"]+label:before {
   box-sizing: border-box;
   position: absolute;
-  top: -1px;
+  top: 1px;
   left: 0;
   content: '';
   width: 20px;
@@ -2122,7 +2122,7 @@ input[type="checkbox"]+label:before {
 input[type="checkbox"]+label:after {
   box-sizing: border-box;
   position: absolute;
-  top: 4px;
+  top: 6px;
   left: 5px;
   content: '';
   width: 10px;
@@ -2184,7 +2184,7 @@ input[type="radio"]+label {
 input[type="radio"]+label:before {
   box-sizing: border-box;
   position: absolute;
-  top: 1px;
+  top: 2px;
   left: 0;
   content: '';
   width: 20px;
@@ -2198,7 +2198,7 @@ input[type="radio"]+label:before {
 input[type="radio"]+label:after {
   box-sizing: border-box;
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 5px;
   content: '';
   width: 10px;
@@ -2272,5 +2272,68 @@ input[type="radio"]:checked+label:after {
 }
 .form fieldset legend {
   font-weight: 600;
+}
+.table {
+  overflow: auto;
+}
+.table table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: 1px solid transparent;
+}
+.table table td,
+.table table th {
+  padding: 11px 15px;
+  border-right: 1px solid transparent;
+}
+.table table th {
+  font-weight: bold;
+  text-align: left;
+}
+.table table td {
+  border-bottom: 1px solid transparent;
+}
+.table table tr {
+  -webkit-transition: background 0.15s;
+  transition: background 0.15s;
+}
+.table table thead th {
+  border-bottom: 1px solid #e0ebef;
+}
+.table table tfoot td {
+  border-top: 1px solid #e0ebef;
+}
+.table table.rounded {
+  border-radius: 4px;
+}
+.table table.striped tbody tr:nth-child(even) {
+  background-color: #eaf5f9;
+}
+.table table.hovered tbody trhover {
+  background-color: $bg-table-hover;
+}
+.table table.hovered.striped tr:nth-child(even)hover {
+  background-color: #e5f0f4;
+}
+.table table.bordered {
+  border-color: #e0ebef;
+}
+.table table.bordered thead tr {
+  background-color: #e0ebef;
+}
+.table table.bordered.bordered-rows-v td,
+.table table.bordered.bordered-rows-v th {
+  border-right-color: #e0ebef;
+}
+.table table.bordered.bordered-rows-v td:last-of-type,
+.table table.bordered.bordered-rows-v th:last-of-type {
+  border-right-color: transparent;
+}
+.table table.bordered-rows-h tbody td {
+  border-bottom-color: #e0ebef;
+}
+.table table.bordered-rows-h tbody tr:last-of-type td {
+  border-bottom-color: transparent;
 }
 /*# sourceMappingURL=project.css.map */
