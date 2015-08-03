@@ -139,7 +139,7 @@ input[type="checkbox"]
 			height $size - 10
 			margin-top -(($size - 10) / 2)
 			border-radius 1px
-			background-color $color-blue
+			background-color $color-blue-dk
 			opacity 0
 			transform scale(0)
 			transition .15s
@@ -160,7 +160,7 @@ input[type="checkbox"]
 	&:checked
 		&+label
 			&:before
-				border-color $color-blue
+				border-color $color-blue-dk
 
 			&:after
 				opacity 1
@@ -168,10 +168,10 @@ input[type="checkbox"]
 
 			&:hover
 				&:before
-					border-color $color-blue - 15
+					border-color $color-blue-dk - 15
 
 				&:after
-					background-color $color-blue - 15
+					background-color $color-blue-dk - 15
 
 input[type="radio"]
 	$size = 18px
@@ -213,7 +213,7 @@ input[type="radio"]
 			width $size - 10
 			height $size - 10
 			border-radius $size
-			background-color $color-blue
+			background-color $color-blue-dk
 			opacity 0
 			transform scale(0)
 			transition .15s
@@ -227,7 +227,7 @@ input[type="radio"]
 			cursor default
 
 			&:before
-				border 1px solid $color-blue
+				border 1px solid $color-blue-dk
 
 			&:after
 				opacity 1

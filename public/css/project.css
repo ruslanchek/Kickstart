@@ -2083,7 +2083,7 @@ input[type="checkbox"]+label:after {
   height: 8px;
   margin-top: -4px;
   border-radius: 1px;
-  background-color: #17b9f0;
+  background-color: #119ccb;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2103,7 +2103,7 @@ input[type="checkbox"].error+label:hover:before {
   border-color: #d42729;
 }
 input[type="checkbox"]:checked+label:before {
-  border-color: #17b9f0;
+  border-color: #119ccb;
 }
 input[type="checkbox"]:checked+label:after {
   opacity: 1;
@@ -2115,10 +2115,10 @@ input[type="checkbox"]:checked+label:after {
   transform: scale(1);
 }
 input[type="checkbox"]:checked+label:hover:before {
-  border-color: #08aae1;
+  border-color: #028dbc;
 }
 input[type="checkbox"]:checked+label:hover:after {
-  background-color: #08aae1;
+  background-color: #028dbc;
 }
 input[type="radio"] {
   visibility: hidden;
@@ -2161,7 +2161,7 @@ input[type="radio"]+label:after {
   width: 8px;
   height: 8px;
   border-radius: 18px;
-  background-color: #17b9f0;
+  background-color: #119ccb;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2178,7 +2178,7 @@ input[type="radio"]:checked+label {
   cursor: default;
 }
 input[type="radio"]:checked+label:before {
-  border: 1px solid #17b9f0;
+  border: 1px solid #119ccb;
 }
 input[type="radio"]:checked+label:after {
   opacity: 1;
