@@ -2218,11 +2218,12 @@ input[type="checkbox"]+label {
 input[type="checkbox"]+label:before {
   box-sizing: border-box;
   position: absolute;
-  top: 0px;
+  top: 50%;
   left: 0;
   content: '';
   width: 18px;
   height: 18px;
+  margin-top: -9px;
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #c2cdd1;
@@ -2233,11 +2234,12 @@ input[type="checkbox"]+label:before {
 input[type="checkbox"]+label:after {
   box-sizing: border-box;
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: 5px;
   content: '';
   width: 8px;
   height: 8px;
+  margin-top: -4px;
   border-radius: 1px;
   background-color: #17b9f0;
   opacity: 0;
@@ -2295,8 +2297,9 @@ input[type="radio"]+label:before {
   box-sizing: border-box;
   position: absolute;
   background-color: #fff;
-  top: 2px;
+  top: 50%;
   left: 0;
+  margin-top: -9px;
   content: '';
   width: 18px;
   height: 18px;
@@ -2309,8 +2312,9 @@ input[type="radio"]+label:before {
 input[type="radio"]+label:after {
   box-sizing: border-box;
   position: absolute;
-  top: 7px;
+  top: 50%;
   left: 5px;
+  margin-top: -4px;
   content: '';
   width: 8px;
   height: 8px;

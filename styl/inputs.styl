@@ -117,11 +117,12 @@ input[type="checkbox"]
 		&:before
 			box-sizing border-box
 			position absolute
-			top 0px
+			top 50%
 			left 0
 			content ''
 			width $size
 			height $size
+			margin-top -($size / 2)
 			display inline-block
 			border-radius 4px
 			border 1px solid $color-gray - 20
@@ -131,11 +132,12 @@ input[type="checkbox"]
 		&:after
 			box-sizing border-box
 			position absolute
-			top 5px
+			top 50%
 			left 5px
 			content ''
 			width $size - 10
 			height $size - 10
+			margin-top -(($size - 10) / 2)
 			border-radius 1px
 			background-color $color-blue
 			opacity 0
@@ -190,8 +192,9 @@ input[type="radio"]
 			box-sizing border-box
 			position absolute
 			background-color #fff
-			top 2px
+			top 50%
 			left 0
+			margin-top -($size / 2)
 			content ''
 			width $size
 			height $size
@@ -203,8 +206,9 @@ input[type="radio"]
 		&:after
 			box-sizing border-box
 			position absolute
-			top 7px
+			top 50%
 			left 5px
+			margin-top -(($size - 10) / 2)
 			content ''
 			width $size - 10
 			height $size - 10
