@@ -1,0 +1,110 @@
+.gallery-pages
+	text-align center
+	margin-bottom $default-spacing-unit
+
+	li
+		cursor pointer
+		width 8px
+		height 8px
+		display inline-block
+		border-radius 12px
+		font-size 0
+		position relative
+		margin 0 10px
+		background $color-gray
+
+		&:before
+			content ''
+			width 12px
+			height 12px
+			display block
+			background $color-dark
+			top 50%
+			left 50%
+			margin -6px 0 0 -6px
+			border-radius 12px
+			position absolute
+			opacity 0
+			transition .2s
+			transform scale(0)
+
+		&.active
+			&:before
+				opacity 1
+				transform scale(1)
+
+.gallery
+	width 100%
+	height 550px
+	background $color-gray-lt
+	border-radius $border-radius
+	position relative
+	margin-bottom ($default-spacing-unit/2)
+
+	.prev,
+	.next
+		position absolute
+		top 0
+		height 100%
+		display block
+		z-index 2
+		cursor pointer
+
+		+below($below-handheld)
+			display none
+
+		&.prev
+			width 35%
+			left 0
+
+		&.next
+			width 65%
+			right 0
+
+	.frame
+		height 550px
+		overflow hidden
+
+		ul
+			list-style none
+			margin 0
+			padding 0
+			height 100%
+			font-size 50px
+
+			li
+				float left
+				width 620px
+				height 100%
+				padding 0
+				text-align center
+				cursor pointer
+				overflow hidden
+				position relative
+
+				.loading
+					&:before,
+					&:after
+						transform scale(1.5)
+
+				img
+					border-radius 4px
+					width 100%
+					opacity 0
+					transition .4s
+					transform scale(0)
+
+					+below($below-handheld)
+						border-radius 0
+
+				&.loaded
+					.loading
+						opacity 0
+
+						&:before,
+						&:after
+							transform scale(0)
+
+					img
+						opacity 1
+						transform scale(1)
