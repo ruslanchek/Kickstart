@@ -37,8 +37,8 @@
 	margin-bottom ($default-spacing-unit/2)
 
 	+below($below-handheld)
-		margin-left 100% - ($side-page-padding-handheld + 100)
-		width 100% + ($side-page-padding-handheld * 2)
+		margin-left 100% - (($side-page-padding-handheld + 1) + 100)
+		width 100% + (($side-page-padding-handheld + 1) * 2)
 
 .gallery
 	width 100%
@@ -88,9 +88,8 @@
 				position relative
 
 				.loading
-					&:before,
-					&:after
-						transform scale(1.5)
+					opacity 1
+					transform scale(1)
 
 				img
 					border-radius $border-radius
@@ -105,10 +104,7 @@
 				&.loaded
 					.loading
 						opacity 0
-
-						&:before,
-						&:after
-							transform scale(0)
+						transform scale(0)
 
 					img
 						opacity 1

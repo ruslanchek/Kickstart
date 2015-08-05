@@ -3,7 +3,7 @@ body
 	color $color-dark
 	font-size $font-size
 	line-height $line-height
-	
+
 a
 	text-decoration none
 	color $color-blue-lt
@@ -75,3 +75,33 @@ h3
 
 .date
 	color $color-gray-dk
+
+.loading
+	position absolute
+	z-index 1000
+	top 50%
+	left 50%
+	width 10px
+	height 30px
+	margin -15px 0 0 -5px
+	animation loading-balls .4s infinite linear
+	transition .4s
+	pointer-events none
+
+	&:before,
+	&:after
+		display block
+		width 15px
+		height 15px
+		content: ''
+		border-radius 5px
+		position absolute
+		background rgba(255, 255, 255, 1)
+		transition .4s
+		left 0
+
+	&:after
+		top 30px
+
+	&:before
+		bottom 30px

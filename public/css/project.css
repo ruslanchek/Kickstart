@@ -226,6 +226,30 @@ select {
     filter: alpha(opacity=0);
   }
 }
+@-webkit-keyframes loading-balls {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes loading-balls {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #364347;
@@ -246,10 +270,10 @@ hr {
   margin: 30px 0;
 }
 .limiter {
-  width: 96%;
+  width: 94%;
   margin: 0 auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
   max-width: 1400px;
   min-width: 960px;
 }
@@ -308,6 +332,39 @@ h3 {
 }
 .date {
   color: #93a4aa;
+}
+.loading {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 30px;
+  margin: -15px 0 0 -5px;
+  -webkit-animation: loading-balls 0.4s infinite linear;
+  animation: loading-balls 0.4s infinite linear;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.loading:before,
+.loading:after {
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 5px;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  left: 0;
+}
+.loading:after {
+  top: 30px;
+}
+.loading:before {
+  bottom: 30px;
 }
 .btn {
   cursor: pointer;
@@ -2393,8 +2450,8 @@ input[type="radio"]:checked+label:after {
 }
 @media only screen and (max-width: 500px) {
   .gallery-container {
-    margin-left: -5%;
-    width: 110%;
+    margin-left: -6%;
+    width: 112%;
   }
 }
 .gallery {
@@ -2449,11 +2506,14 @@ input[type="radio"]:checked+label:after {
   overflow: hidden;
   position: relative;
 }
-.gallery .frame ul li .loading:before,
-.gallery .frame ul li .loading:after {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
+.gallery .frame ul li .loading {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 .gallery .frame ul li img {
   border-radius: 4px;
@@ -2476,9 +2536,6 @@ input[type="radio"]:checked+label:after {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-}
-.gallery .frame ul li.loaded .loading:before,
-.gallery .frame ul li.loaded .loading:after {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);

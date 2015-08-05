@@ -9,11 +9,13 @@ $(function() {
 		var $frameItem = $(this);
 
 		$frameItem.find('img').on('load', function() {
-			$frameItem.addClass('loaded');
-
 			setTimeout(function() {
-				$frameItem.find('.loading').remove();
-			}, 400);
+				$frameItem.addClass('loaded');
+
+				setTimeout(function() {
+					$frameItem.find('.loading').remove();
+				}, 400);
+			}, 500);
 		});
 	});
 
