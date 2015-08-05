@@ -42,9 +42,9 @@
 
 .gallery
 	width 100%
-	height 550px
 	background $color-gray-lt
 	border-radius $border-radius
+	overflow hidden
 	position relative
 
 	.prev,
@@ -68,8 +68,9 @@
 			right 0
 
 	.frame
-		height 550px
 		overflow hidden
+		position relative
+		border-radius $border-radius
 
 		ul
 			list-style none
@@ -80,32 +81,38 @@
 
 			li
 				float left
-				width 100%
 				padding 0
 				text-align center
 				cursor pointer
-				overflow hidden
 				position relative
+				vertical-align middle
 
-				.loading
+				.img-container
+					overflow hidden
+					display block
+					height 100%
+					width 100%
+					border-radius $border-radius
+
+				.loading-balls
 					opacity 1
 					transform scale(1)
 
 				img
-					border-radius $border-radius
-					width 100%
+					top 50%
+					position relative
+					max-width 100%
+					max-height 100%
 					opacity 0
+					display inline
 					transition .4s
 					transform scale(0)
 
-					+below($below-handheld)
-						border-radius 0
-
 				&.loaded
-					.loading
+					.loading-balls
 						opacity 0
-						transform scale(0)
+						transform scale(0) translateY(-50%)
 
 					img
 						opacity 1
-						transform scale(1)
+						transform scale(1) translateY(-50%)

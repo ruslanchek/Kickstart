@@ -13,7 +13,7 @@ $(function() {
 				$frameItem.addClass('loaded');
 
 				setTimeout(function() {
-					$frameItem.find('.loading').remove();
+					$frameItem.find('.loading-balls').remove();
 				}, 400);
 			}, 500);
 		});
@@ -45,14 +45,11 @@ $(function() {
 
 	var resizeItems = function() {
 		var $items = $frame.find('ul li');
+		var width = $galleryContainer.width();
+		var height = (width / 4) * 3;
 
-		$items.css('width', $galleryContainer.width());
-		$items
-			.add($frame)
-			.add($gallery)
-			.add($galleryContainer)
-			.add($frame)
-			.css('height', $galleryContainer.width());
+		$items.css('width', width);
+		$items.add($frame, $galleryContainer).css('height', height);
 
 		$frame.sly('reload');
 	};
