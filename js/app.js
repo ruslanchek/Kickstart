@@ -22,6 +22,7 @@ $(function() {
 	$frame.sly({
 		horizontal: 1,
 		itemNav: 'basic',
+		itemSelector: 'li',
 		smart: 1,
 		activateOn: 'click',
 		mouseDragging: 1,
@@ -45,13 +46,13 @@ $(function() {
 	var resizeItems = function() {
 		var $items = $frame.find('ul li');
 
-		$items.css('width', $frame.width());
+		$items.css('width', $galleryContainer.width());
 		$items
 			.add($frame)
 			.add($gallery)
 			.add($galleryContainer)
 			.add($frame)
-			.css('height', $frame.width());
+			.css('height', $galleryContainer.width());
 
 		$frame.sly('reload');
 	};
