@@ -10,11 +10,12 @@ textarea,
 	border 1px solid $color-gray - 20
 	font-size $font-size
 	font-family $font-family
+	background-color transparent
 	outline none
 	transition border-color .2s, color .2s, background-color .2s, box-shadow .2s
 	width 100%
 	display block
-	color $color-gray-dk - 20
+	color $color-gray-dk
 
 	&.small
 		min-height 36px
@@ -36,14 +37,14 @@ textarea,
 
 	&:disabled
 		opacity .75
-		background-color $color-gray-lt
-		border-color $color-gray-lt !important
+		background-color rgba(#fff, 0.05)
+		border-color $color-gray - 20 !important
 
 		+placeholder()
 			color #fff !important
 
 	&:hover
-		border-color $color-gray - 40
+		border-color $color-gray + 10
 
 		+placeholder()
 			color $color-gray - 20
