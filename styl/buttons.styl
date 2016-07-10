@@ -1,0 +1,112 @@
+.btn
+    cursor pointer
+    background-color $color-gray
+    display inline-block
+    vertical-align middle
+    padding 0 30px
+    box-sizing border-box
+    border none
+    color #fff
+    outline none
+    line-height 48px
+    height 50px
+    text-align center
+    font-size $font-size
+    font-family $font-family
+    border-radius $border-radius
+    position relative
+    white-shace nowrap
+    overflow hidden
+    box-shadow inset 0 -3px 0 rgba(0, 0, 0, .1)
+    transition .2s
+    user-select none
+    min-width 150px
+
+    &.green
+        background-color $color-green
+
+    &.blue
+        background-color $color-blue
+
+    &.red
+        background-color $color-red
+
+    &.yellow
+        background-color $color-yellow
+
+    &.purple
+        background-color $color-purple
+
+    &.orange
+        background-color $color-orange
+
+    &.flat
+        box-shadow none
+
+    &.wide
+        width 100%
+
+    &:before
+        content ''
+        position absolute
+        top 50%
+        left 50%
+        margin-top -25px
+        margin-left -25px
+        width 50px
+        height 50px
+        background-color #fff
+        transition .2s
+        opacity 0
+        border-radius 125px
+        transform scale(0)
+        display block
+        animation active-button .5s 1
+
+    &:after
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        display block
+        background-color #fff
+        opacity 0
+        transition .2s
+
+    &:hover
+        color #fff
+
+        &:after
+            opacity .2
+
+    &:focus
+        // box-shadow 0 0 0 3px rgba(0, 184, 242, .2), inset 0 -3px 0 rgba(0, 0, 0, .1)
+        box-shadow inset 0 -3px 0 rgba(0, 0, 0, .1)
+
+    &:active
+        transform translateY(1px) scale(.997)
+
+        &:before
+            animation-name active-button-reflow
+
+    &:disabled,
+    &.disabled
+        opacity .4
+        pointer-events none
+
+    &.loading
+        pointer-events none
+
+        &:before
+            border-radius 0
+            transform scale(1)
+            width 100%
+            height 100%
+            margin 0
+            left 0
+            top 0
+            margin 0
+            opacity 1
+            loading-pattern()

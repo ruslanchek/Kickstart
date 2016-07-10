@@ -1,0 +1,107 @@
+body
+	font-family $font-family
+	color $color-dark
+	font-size $font-size
+	line-height $line-height
+
+a
+	text-decoration none
+	color $color-blue-lt
+	transition color .075s
+
+	&:hover
+		color $color-blue-dk
+
+hr
+	border-color $color-gray-lt
+	margin $default-spacing-unit 0
+
+.limiter
+	width $page-width-desktop
+	margin 0 auto
+	padding-left $side-page-padding-desktop
+	padding-right $side-page-padding-desktop
+	max-width $max-width-jumbo
+	min-width $min-width-desktop
+
+	+below($below-desktop)
+		max-width $max-width
+
+	+below($below-handheld)
+		min-width $min-width-handheld
+		width $page-width-handheld
+		padding-left $side-page-padding-handheld
+		padding-right $side-page-padding-handheld
+
+.header
+	padding 65px 0 20px
+	margin-bottom 80px
+	position relative
+
+	&:after
+		background-color $color-gray-lt
+		content ''
+		display block
+		height 2px
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+
+	h1
+		font-size 60px
+		font-weight 100
+
+.block
+	margin-bottom $default-spacing-unit * 2
+
+p
+	margin-bottom $default-spacing-unit
+
+h1
+	font-size 30px
+	margin-bottom $default-spacing-unit
+	font-weight 400
+
+h2
+	font-size 24px
+	margin-bottom $default-spacing-unit
+	font-weight 400
+
+h3
+	font-size 20px
+	margin-bottom $default-spacing-unit * 0.5
+	font-weight 400
+
+.date
+	color $color-gray-dk
+
+.loading-balls
+	position absolute
+	z-index 1000
+	top 50%
+	left 50%
+	width 10px
+	height 30px
+	margin -15px 0 0 -5px
+	animation loading-balls .4s infinite linear
+	transition .4s
+	pointer-events none
+
+	&:before,
+	&:after
+		display block
+		width 15px
+		height 15px
+		content: ''
+		border-radius 5px
+		position absolute
+		background rgba(255, 255, 255, 1)
+		transition .4s
+		left 0
+
+	&:after
+		top 30px
+
+	&:before
+		bottom 30px

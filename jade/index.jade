@@ -2,8 +2,390 @@ doctype html
 html
 	head
 		meta(charset="UTF-8")
-		title Document
+		title Limestone
 		link(rel="stylesheet", href="/css/project.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.0/sly.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
+		script(src="js/app.js")
 	body
-		.project
-			p Test
+		.header
+			.limiter
+				.block
+					h1 Limestone
+
+		.limiter
+			.block
+				h2 Typography
+				p The default font-size is 16px with line-height of 1.5. Additionally all paragraphs get have a bottom margin of 30px (the default spacing unit).
+			
+			hr
+			
+			.block
+				h2 Colors
+				
+				.grid
+					.col-3: .color-block.dark Dark
+						.lt
+						.dk
+					
+					.col-3: .color-block.gray Gray
+						.lt
+						.dk
+					
+					.col-3: .color-block.blue Blue
+						.lt
+						.dk
+					
+					.col-3: .color-block.purple Purple
+						.lt
+						.dk
+					
+					.col-3: .color-block.red Red
+						.lt
+						.dk
+						
+					.col-3: .color-block.orange Orange
+						.lt
+						.dk
+			
+					.col-3: .color-block.yellow Yellow
+						.lt
+						.dk
+			
+					.col-3: .color-block.green Green
+						.lt
+						.dk
+						
+				.grid
+					.col-3: .color-block-gray.gray-ltr Gray-LTR
+					
+					.col-3: .color-block-gray.gray-md Gray-MD
+					
+					.col-3: .color-block-gray.gray-lt Gray-LT
+					
+					.col-3: .color-block-gray.gray Gray
+					
+					.col-3: .color-block-gray.gray-dk Gray-DK
+						
+					.col-3: .color-block-gray.dark-lt Dark-LT
+			
+					.col-3: .color-block-gray.dark Dark
+			
+					.col-3: .color-block-gray.dark-dk Dark-DK
+						
+			hr
+			
+			.block
+				h2 Buttons
+				
+				.grid
+					.col-6: a.btn.wide(href="#") Compose e-mail
+					.col-6: a.btn.wide.green(href="#") Compose e-mail
+					.col-6: a.btn.wide.blue(href="#") Compose e-mail
+					.col-6: a.btn.wide.red.disabled(href="#") Compose e-mail
+					
+				.grid
+					.col-6: a.btn.wide.orange(href="#") Compose e-mail
+					.col-6: a.btn.wide.yellow.loading(href="#") Compose e-mail
+					.col-6: a.btn.wide.purple(href="#") Compose e-mail
+					.col-6: a.btn.wide.flat(href="#") Compose e-mail
+			
+			hr
+			
+			.block
+				h2 Grid
+				
+				.grid-demo
+					.grid
+						.col-4 4
+						.col-4 4
+						.col-4 4
+						.col-4 4
+						.col-4 4
+						.col-4 4
+						
+					.grid
+						.col-6 6
+						.col-12 12
+						.col-6 6
+					
+					.grid
+						.col-12 12
+						.col-12 12
+						
+					.grid
+						.col-24 24
+						
+			hr
+			
+			.block
+				h2 Columnar form
+				
+				form.form.columnar
+					.row
+						label.title Name
+						.item
+							input(type="text", placeholder="Your name here")
+						
+					.row
+						label.title E-mail
+						.item
+							input(type="text", disabled, value="Disabled field")
+							
+					.row
+						label.title Phone
+						.item
+							input(type="text", readonly, value="Readonly field")
+							
+					.row
+						label.title Gender
+						.item
+							input#radio-1(type="radio", name="radio-1", value="1", checked)
+							label(for="radio-1") Male
+							
+							input#radio-2(type="radio", name="radio-1", value="2")
+							label(for="radio-2") Female
+
+					.row
+						label.title 
+						.item
+							button.btn.blue(type="submit") Send it
+
+			hr
+
+			.block
+				h2 Linear form
+				
+				form.form
+					.grid
+						.col-6
+						.col-12
+							.row
+								label.title Error here
+								.item
+									input.error(type="text", placeholder="Type your nickname")
+								
+							.row
+								label.title Message
+								.item
+									textarea(rows="3")
+									
+							.row
+								label.title Select realm
+								.item
+									.select
+										select
+											option North America
+											option South America
+											option Europe
+											option Asia
+											option Oceania
+											option South Africa
+									
+							.row
+								label.title
+								.item
+									input#checkbox-1(type="checkbox")
+									label(for="checkbox-1") Check me, baby
+
+							.row
+								label.title 
+								.item
+									button.btn.blue(type="submit") Send it
+						.col-6
+						
+			hr
+						
+			.block
+				h2 Table
+				
+				.table
+					table.rounded.bordered.striped.bordered-rows-v.bordered-rows-h
+						thead
+							tr
+								th
+								th Make
+								th Model
+								th Horsepower
+								th Top speed
+								th Price
+						tbody
+							tr
+								td 1
+								td Audi
+								td A5 3.2 Quattro
+								td 350
+								td 250 km/h
+								td $69 000
+							tr
+								td 2
+								td BMW
+								td 335i xDrive
+								td 300
+								td 250 km/h
+								td $71 000
+							tr
+								td 3
+								td Mercedes Benz
+								td E320 AMG
+								td 298
+								td 250 km/h
+								td $70 000
+							tr
+								td 4
+								td Infiniti
+								td Q50 Eau Rouge
+								td 500
+								td 280 km/h
+								td $100 000
+						tfoot
+							tr
+								td.text-right(colspan="5") Total
+								td $1 290 000
+								
+			hr
+								
+			.block
+				.grid
+					.col-6
+						h2 Aside panel
+						
+						.aside-panel
+							.section
+								h3.title Aside title
+								
+								p Select you items and press Search
+								
+							form.form
+								.section
+									label.title Your realm
+									.select.small
+										select
+											option North America
+											option South America
+											option Europe
+											option Asia
+											option Oceania
+											option South Africa
+											
+								.section
+									input#radio-3(type="radio", name="radio-2", value="1", checked)
+									label(for="radio-3") Male
+									
+									input#radio-4(type="radio", name="radio-2", value="2")
+									label(for="radio-4") Female
+											
+								.section
+									input#checkbox-2(type="checkbox")
+									label(for="checkbox-2") With photos only
+								
+								.section
+									label.title Search string
+									input.small(type="text", placeholder="E.g. BMW")
+											
+								.section
+									button.btn.blue.wide(type="submit") Search
+								
+					.col-18
+						h2 Sections
+						
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=1")
+							
+							.media-block-body
+								.date July 27, 1984
+
+								h3 Section with date
+
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+									
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=2")
+							
+							.media-block-body
+								.date July 27, 1984
+
+								h3 Section with date
+
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+									
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=3")
+							
+							.media-block-body
+								.date July 27, 1984
+
+								h3 Section with date
+
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+									
+						section.media-block
+							.media-block-thumb
+								a(href="#"): img(src="http://lorempixel.com/500/500/?_=4")
+							
+							.media-block-body
+								.date July 27, 1984
+
+								h3 Section with date
+
+								p
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+									|nisi ut aliquip.
+			
+			hr
+			
+			.block
+				h2 Gallery
+				
+				.grid
+					.col-14
+						.gallery-container
+							.gallery
+								.prev
+								.next
+								
+								.frame
+									ul
+										li
+											.loading-balls
+											span.img-container: img.image(src="http://lorempixel.com/800/600/city/?rand=1")
+										li
+											.loading-balls
+											span.img-container: img.image(src="http://lorempixel.com/800/500/city/?rand=2")
+										li
+											.loading-balls
+											span.img-container: img.image(src="http://lorempixel.com/800/800/city/?rand=3")
+										li
+											.loading-balls
+											span.img-container: img.image(src="http://lorempixel.com/800/800/city/?rand=4")
+										li
+											.loading-balls
+											span.img-container: img.image(src="http://lorempixel.com/800/800/city/?rand=5")
+											
+						ul.gallery-pages
+							
+					.col-10
+						p
+							|Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							|nisi ut aliquip.
+				

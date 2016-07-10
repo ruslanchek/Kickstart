@@ -1,0 +1,131 @@
+.grid-demo
+	.grid>div
+		border 2px solid $color-gray
+		border-radius $border-radius
+		box-sizing border-box
+		text-align center
+		line-height 41px
+		height 45px
+		color $color-gray - 20
+
+.color-block,
+.color-block-gray
+	$height = 120px
+
+	height $height
+	position relative
+	color #fff
+	text-align center
+	line-height ($height / 3) * 2
+	border-radius $border-radius
+
+	&.color-block-gray
+		height ($height / 3) * 2
+		line-height ($height / 3) * 2
+
+	.lt, .dk
+		width 50%
+		position absolute
+		bottom 0
+		height ($height / 3)
+
+	.lt
+		left 0
+		border-radius 0 0 0 $border-radius
+
+	.dk
+		right 0
+		border-radius 0 0 $border-radius 0
+
+	&.blue
+		background-color $color-blue
+
+		.lt
+			background-color $color-blue-lt
+
+		.dk
+			background-color $color-blue-dk
+
+	&.gray
+		background-color $color-gray
+
+		.lt
+			background-color $color-gray-lt
+
+		.dk
+			background-color $color-gray-dk
+
+	&.gray-ltr
+		background-color $color-gray-ltr
+
+	&.gray-lt
+		background-color $color-gray-lt
+
+	&.gray
+		background-color $color-gray
+
+	&.gray-md
+		background-color $color-gray-md
+
+	&.gray-dk
+		background-color $color-gray-dk
+
+	&.red
+		background-color $color-red
+
+		.lt
+			background-color $color-red-lt
+
+		.dk
+			background-color $color-red-dk
+
+	&.yellow
+		background-color $color-yellow
+
+		.lt
+			background-color $color-yellow-lt
+
+		.dk
+			background-color $color-yellow-dk
+
+	&.green
+		background-color $color-green
+
+		.lt
+			background-color $color-green-lt
+
+		.dk
+			background-color $color-green-dk
+
+	&.purple
+		background-color $color-purple
+
+		.lt
+			background-color $color-purple-lt
+
+		.dk
+			background-color $color-purple-dk
+
+	&.dark
+		background-color $color-dark
+
+		.lt
+			background-color $color-dark-lt
+
+		.dk
+			background-color $color-dark-dk
+
+	&.dark-lt
+		background-color $color-dark-lt
+
+	&.dark-dk
+		background-color $color-dark-dk
+
+	&.orange
+		background-color $color-orange
+
+		.lt
+			background-color $color-orange-lt
+
+		.dk
+			background-color $color-orange-dk

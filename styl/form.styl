@@ -1,0 +1,52 @@
+.form
+	.row
+		margin-bottom $default-spacing-unit
+
+		&:last-child
+			margin-bottom 0
+
+		.title
+			line-height 2
+
+		input[type="radio"]
+			&+label
+				margin-top 12px
+
+	.btn
+		+below($below-handheld)
+			width 100%
+
+	&.columnar
+		.row
+			@extend .grid
+
+			.title
+				@extend .grid .col-6
+				padding-top 12px
+				line-height $line-height
+				text-align right
+
+				+below($below-handheld)
+					text-align left
+					margin-bottom 0
+					line-height 2
+					padding-top 0
+
+			.item
+				@extend .grid .col-12
+
+		&.wide
+			.item
+				@extend .grid .col-18
+
+	fieldset
+		border 1px solid $color-gray-lt
+		padding $default-spacing-unit
+		border-radius $border-radius
+
+		+below($below-handheld)
+			border none
+			padding 0
+
+		legend
+			font-weight 600

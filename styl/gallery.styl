@@ -1,0 +1,118 @@
+.gallery-pages
+	text-align center
+	margin-bottom $default-spacing-unit
+
+	li
+		cursor pointer
+		width 8px
+		height 8px
+		display inline-block
+		border-radius 12px
+		font-size 0
+		position relative
+		margin 0 10px
+		background $color-gray
+
+		&:before
+			content ''
+			width 12px
+			height 12px
+			display block
+			background $color-dark
+			top 50%
+			left 50%
+			margin -6px 0 0 -6px
+			border-radius 12px
+			position absolute
+			opacity 0
+			transition .2s
+			transform scale(0)
+
+		&.active
+			&:before
+				opacity 1
+				transform scale(1)
+
+.gallery-container
+	margin-bottom ($default-spacing-unit/2)
+
+	+below($below-handheld)
+		margin-left 100% - (($side-page-padding-handheld + 1) + 100)
+		width 100% + (($side-page-padding-handheld + 1) * 2)
+
+.gallery
+	width 100%
+	background $color-gray-lt
+	border-radius $border-radius
+	overflow hidden
+	position relative
+
+	.prev,
+	.next
+		position absolute
+		top 0
+		height 100%
+		display block
+		z-index 2
+		cursor pointer
+
+		+below($below-handheld)
+			display none
+
+		&.prev
+			width 35%
+			left 0
+
+		&.next
+			width 65%
+			right 0
+
+	.frame
+		overflow hidden
+		position relative
+		border-radius $border-radius
+
+		ul
+			list-style none
+			margin 0
+			padding 0
+			height 100%
+			font-size 50px
+
+			li
+				float left
+				padding 0
+				text-align center
+				cursor pointer
+				position relative
+				vertical-align middle
+
+				.img-container
+					overflow hidden
+					display block
+					height 100%
+					width 100%
+					border-radius $border-radius
+
+				.loading-balls
+					opacity 1
+					transform scale(1)
+
+				img
+					top 50%
+					position relative
+					max-width 100%
+					max-height 100%
+					opacity 0
+					display inline
+					transition .4s
+					transform scale(0)
+
+				&.loaded
+					.loading-balls
+						opacity 0
+						transform scale(0) translateY(-50%)
+
+					img
+						opacity 1
+						transform scale(1) translateY(-50%)

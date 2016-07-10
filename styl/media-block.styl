@@ -1,0 +1,24 @@
+.media-block
+	margin-bottom $default-spacing-unit
+
+	cf()
+
+	.media-block-thumb
+		@extend .grid .col-4
+		border-radius $border-radius
+		background-color $color-gray-ltr
+		overflow hidden
+		text-align center
+		line-height 1
+		vertical-align middle
+
+		img
+			width 100%
+			display block
+			border-radius $border-radius
+
+	.media-block-body
+		@extend .grid .col-20
+
+		*:last-child
+			margin-bottom 0

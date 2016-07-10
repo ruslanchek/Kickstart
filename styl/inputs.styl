@@ -1,0 +1,234 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+.select
+	box-sizing border-box
+	padding 10px 15px
+	min-height 45px
+	border-radius $border-radius
+	border 1px solid $color-gray - 20
+	font-size $font-size
+	font-family $font-family
+	outline none
+	transition border-color .2s, color .2s, background-color .2s, box-shadow .2s
+	width 100%
+	display block
+	color $color-gray-dk - 20
+
+	&.small
+		min-height 36px
+		padding 7px 10px
+		font-size $font-size-small
+
+		&.select
+			padding 0
+
+			select
+				min-height 34px
+				padding 6px 10px
+				font-size $font-size-small
+
+
+	+placeholder()
+		color $color-gray - 20
+		transition color .2s
+
+	&:disabled
+		opacity .75
+		background-color $color-gray-lt
+		border-color $color-gray-lt !important
+
+		+placeholder()
+			color #fff !important
+
+	&:hover
+		border-color $color-gray - 40
+
+		+placeholder()
+			color $color-gray - 20
+
+	&:focus
+		border-color $color-blue-lt
+		color $color-dark
+
+	&.error
+		border-color $color-red
+
+textarea
+	padding-top 10px
+
+
+.select
+	position relative
+	cursor pointer
+	padding 0
+	background-color #fff
+
+	&:after
+		content ''
+		display block
+		position absolute
+		top 50%
+		right 15px
+		width 0
+		height 0
+		margin-top -3px
+		border-style solid
+		border-width 7px 6px 0 6px
+		transition .2s
+		border-color $color-gray - 20 transparent transparent transparent
+
+	&:hover
+		&:after
+			border-color $color-gray - 50 transparent transparent transparent
+
+	select
+		cursor pointer
+		position relative
+		top 0
+		left 0
+		width 100%
+		padding 10px 15px
+		min-height 43px
+		box-sizing border-box
+		margin 0
+		background transparent
+		border none
+		outline none
+		-webkit-appearance none
+		color $color-gray-dk - 20
+		font-family $font-family
+		font-size $font-size
+
+input[type="checkbox"]
+	$size = 18px
+
+	visibility hidden
+	opacity 0
+	position absolute
+
+	&+label
+		cursor pointer
+		position relative
+		padding-left $size * 1.5
+		z-index 1
+
+		&:before
+			box-sizing border-box
+			position absolute
+			top 50%
+			left 0
+			content ''
+			width $size
+			height $size
+			margin-top -($size / 2)
+			display inline-block
+			border-radius 4px
+			border 1px solid $color-gray - 20
+			transition .15s
+			background-color #fff
+
+		&:after
+			box-sizing border-box
+			position absolute
+			top 50%
+			left 5px
+			content ''
+			width $size - 10
+			height $size - 10
+			margin-top -(($size - 10) / 2)
+			border-radius 1px
+			background-color $color-blue-dk
+			opacity 0
+			transform scale(0)
+			transition .15s
+
+		&:hover
+			&:before
+				border-color $color-gray - 40
+
+	&.error
+		&+label
+			&:before
+				border-color $color-red
+
+			&:hover
+				&:before
+					border-color $color-red - 35
+
+	&:checked
+		&+label
+			&:before
+				border-color $color-blue-dk
+
+			&:after
+				opacity 1
+				transform scale(1)
+
+			&:hover
+				&:before
+					border-color $color-blue-dk - 15
+
+				&:after
+					background-color $color-blue-dk - 15
+
+input[type="radio"]
+	$size = 18px
+
+	visibility hidden
+	opacity 0
+	position absolute
+
+	&+label
+		cursor pointer
+		position relative
+		padding-left $size * 1.5
+		margin-right $default-spacing-unit
+		display inline-block
+		z-index 1
+
+		&:before
+			box-sizing border-box
+			position absolute
+			background-color #fff
+			top 50%
+			left 0
+			margin-top -($size / 2)
+			content ''
+			width $size
+			height $size
+			display inline-block
+			border-radius $size
+			border 1px solid $color-gray - 20
+			transition .15s
+
+		&:after
+			box-sizing border-box
+			position absolute
+			top 50%
+			left 5px
+			margin-top -(($size - 10) / 2)
+			content ''
+			width $size - 10
+			height $size - 10
+			border-radius $size
+			background-color $color-blue-dk
+			opacity 0
+			transform scale(0)
+			transition .15s
+
+		&:hover
+			&:before
+				border-color $color-gray - 40
+
+	&:checked
+		&+label
+			cursor default
+
+			&:before
+				border 1px solid $color-blue-dk
+
+			&:after
+				opacity 1
+				transform scale(1)
